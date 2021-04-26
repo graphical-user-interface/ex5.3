@@ -53,18 +53,18 @@ export default function App() {
 		)
 		ctx.stroke()
 		//Mouth
-		// ctx.beginPath()
-		// ctx.ellipse(
-		// 	canvasWidth / 2,
-		// 	canvasHeight / 2 + radius / 4,
-		// 	30,
-		// 	30,
-		// 	Math.PI,
-		// 	0,
-		// 	Math.PI,
-		// 	true,
-		// )
-		// ctx.stroke()
+		ctx.beginPath()
+		ctx.ellipse(
+			canvasWidth / 2,
+			canvasHeight / 2 + radius / 4,
+			30,
+			70,
+			Math.PI,
+			0,
+			Math.PI,
+			true,
+		)
+		ctx.fill()
 	}
 	useEffect(() => {
 		let ctx = canvasRef.current.getContext("2d")
@@ -100,19 +100,7 @@ export default function App() {
 			2 * Math.PI,
 		)
 		ctx.fill()
-		//Tongue
-		ctx.beginPath()
-		ctx.ellipse(
-			canvasWidth / 2,
-			canvasHeight / 2 + radius / 4,
-			30,
-			70,
-			Math.PI,
-			0,
-			Math.PI,
-			true,
-		)
-		ctx.fill()
+
 		ctx.save()
 		ctx.restore()
 	})
